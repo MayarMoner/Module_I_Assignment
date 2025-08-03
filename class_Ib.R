@@ -1,0 +1,23 @@
+getwd()
+dir.create("raw_data")
+dir.create("clean_data")
+dir.create("scripts")
+dir.create("results")
+dir.create("plots")
+
+read.csv(file.choose())
+
+data = ("patient_info.csv")
+str("data")
+data
+data_analyze= read.csv("patient_info.csv")
+getwd()
+View("data_analyze")
+head(data_analyze)
+str(data_analyze)
+data_analyze$gender_fac = as.factor(data_analyze$gender)
+data_analyze$diagnosis_fac = as.factor(data_analyze$diagnosis)
+data_analyze$smoker_fac = as.factor(data_analyze$smoker)
+data_analyze$smoker_stat_binary= ifelse(data_analyze$smoker== "YES",1 ,0)
+str(data_analyze)
+write.csv(data_analyze, file = "clean_data/patient_info_clean.csv")
