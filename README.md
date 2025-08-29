@@ -37,3 +37,16 @@ Module_I_Assignment/
 │   └── clean_data_meta.csv
 │
 └── README.md                    # Project description
+
+Class_2_Assignment.R → R script containing the code used in this assignment.
+
+MayarMoner_Class_2_Assignment.RData → Saved R workspace/results file.
+This assignment processes differential expression results (CSV files) and:
+
+Imports the data.
+
+Replaces missing values in the padj column with 1.
+
+Classifies each gene into categories (Upregulated, Downregulated, or Not_Significant) using the custom classify_gene() function.
+
+Saves results for each input file in both the R environment and as CSV output files.
